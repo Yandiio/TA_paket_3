@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <div class="panel">
             <div class="panel-heading">
-                <router-link :to="{ name: 'outlet.add' }" class="btn btn-primary btn-sm btn-flat">Tambah</router-link>
+                <router-link :to="{ name: 'outlets.add' }" class="btn btn-primary btn-sm btn-flat">Tambah</router-link>
                 <div class="pull-right">
                     <input type="text" class="form-control" placeholder="Cari...." v-model="search">
                 </div>
@@ -13,9 +13,9 @@
                         <span class="label label-success" v-if="row.item.status == 1">Active</span>
                         <span class="label label-default" v-else>Inactive</span>
                     </template>
-                    <template slot="actions" slot-scope="row">
-                        <router-link :to="{ name: 'outlets.edit', params: {id: row.item.code} }" class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i></router-link>
-                        <button class="btn btn-danger btn-sm" @click="deleteOutlet(row.item.id)"><i class="fa fa-trash"></i></button>
+                    <template v-slot:cell(actions)="row">
+                        <router-link :to="{ name: 'outlets.edit', params: {id: row.item.code} }" class="btn btn-warning btn-sm">Edit<i class="fa fa-pencil"></i></router-link>
+                        <button class="btn btn-danger btn-sm" @click="deleteOutlet(row.item.id)">Hapus<i class="fa fa-trash"></i></button>
                     </template>
                 </b-table>
 
@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions,mapState } from 'vuex'
 export default {
     nama: 'DataOutlet',
     created() {
@@ -52,7 +52,7 @@ export default {
             fields: [
                 { key: 'code', label: 'Kode Outlet'},
                 { key: 'name', label: 'Nama Outlet'},
-                { key: 'address', label: 'Alamat'},
+                { key: 'alamat', label: 'Alamat'},
                 { key: 'status', label: 'Status'},
                 { key: 'phone', label: 'Telpon'},
                 { key: 'actions', label: 'Aksi'},

@@ -9,6 +9,23 @@ import DataOutlet from './pages/outlets/Outlet.vue'
 import AddOutlet from './pages/outlets/Add.vue'
 import EditOutlet from './pages/outlets/Edit.vue'
 
+import IndexCourier from './pages/couriers/Index.vue'
+import DataCouriers from './pages/couriers/Courier.vue'
+import AddCouriers from './pages/couriers/Add.vue'
+import EditCouriers from './pages/couriers/Edit.vue'
+
+import IndexCustomer from './pages/customers/Index.vue'
+import DataCustomer from './pages/customers/Customer.vue'
+import AddCustomer from './pages/customers/Add.vue'
+import EditCustomer from './pages/customers/Edit.vue'
+
+import IndexTransaction from './pages/transaction/Index.vue'
+import AddTransaction from './pages/transaction/Add.vue'
+import ViewTransaction from './pages/transaction/View.vue'
+import ListTransaction from './pages/transaction/List.vue'
+
+
+
 
 Vue.use(Router)
 
@@ -28,24 +45,24 @@ const router = new Router({
             component : Login
         },
         {
-            path: '/outlet',
+            path: '/outlets',
             component: IndexOutlet,
             children: [
                 {
                     path: '',
-                    name: 'outlet.data',
+                    name: 'outlets.data',
                     component: DataOutlet,
                     meta : { title: 'Manage Outlets' }
                 },
                 {
                     path: 'add',
-                    name: 'outlet.add',
+                    name: 'outlets.add',
                     component :AddOutlet,
                     meta : { title: 'Add New Outlet' }
                 },
                 {
                     path: 'edit/:id',
-                    name: 'outlet.edit',
+                    name: 'outlets.edit',
                     component : EditOutlet,
                     meta :{ title : 'Edit Outlet'}
                 }

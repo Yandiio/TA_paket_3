@@ -33,7 +33,7 @@ const store = new Vuex.Store({
             state.errors = payload
         },
         CLEAR_ERRORS(state) {
-            stete.errors = []
+            state.errors = []
         }
     }
 })

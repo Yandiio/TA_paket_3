@@ -7,7 +7,7 @@ const state = () => ({
         code: '',
         name: '',
         status: false,
-        address: '',
+        alamat: '',
         phone: ''
     },
     page: 1
@@ -26,7 +26,7 @@ const mutations = {
         state.outlet = {
             code: payload.code,
             name: payload.name,
-            address: payload.address,
+            alamat: payload.alamat,
             phone: payload.phone,
             status: payload.status
         }
@@ -36,7 +36,7 @@ const mutations = {
             code: '',
             name: '',
             status: false,
-            address: '',
+            alamat: '',
             phone: ''
         }
     }
@@ -48,7 +48,6 @@ const actions = {
         
         let search = typeof payload != 'undefined' ? payload: ''
         return new Promise((resolve, reject) => {
-
             $axios.get(`/outlets?page=${state.page}&q=${search}`)
             .then((response) => {
                 commit('ASSIGN_DATA',response.data)

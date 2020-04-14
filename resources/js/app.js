@@ -6,9 +6,8 @@ import BootstrapVue from 'bootstrap-vue'
 import VueSweetalert2 from 'vue-sweetalert2'
 
 Vue.use(VueSweetalert2)
-vue.use(BootstrapVue)
+Vue.use(BootstrapVue)
 
-import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 new Vue({
     el: '#lau',

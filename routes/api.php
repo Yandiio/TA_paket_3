@@ -21,5 +21,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/login','AuthController@login');
 
 Route::group(['middleware' => 'auth:api'],function(){
-    Route::resouce('/outlets','API\OutletController')->except(['show']);
+    Route::resource('/outlets','API\OutletController')->except(['show']);
 });

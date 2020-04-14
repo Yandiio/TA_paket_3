@@ -3,7 +3,7 @@
         <nav class="navbar navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
-                    <router-link to="/" class="navbar-brand"><b>Laundry</b></router-link>
+                    <router-link to="/" class="navbar-brand"><b><p>Laundry</p></b></router-link>
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
                         <i class="fa fa-bars"></i>
                     </button>
