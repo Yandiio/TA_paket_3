@@ -4,6 +4,12 @@ import Home from './pages/Home.vue'
 import Login from './pages/Login.vue'
 import store from './store.js'
 
+import IndexProduct from './pages/products/Index.vue'
+import DataProduct from './pages/products/Product.vue'
+import AddProduct from './pages/products/Add.vue'
+import EditProduct from './pages/products/Edit.vue'
+
+
 import IndexOutlet from './pages/outlets/Index.vue'
 import DataOutlet from './pages/outlets/Outlet.vue'
 import AddOutlet from './pages/outlets/Add.vue'
